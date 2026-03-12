@@ -220,10 +220,6 @@ const Hero = () => {
             运营商
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-300 mb-10 font-light tracking-wide max-w-2xl mx-auto drop-shadow-md backdrop-blur-sm">
-            以数据为关键要素，用AI重构区域能源体系，打造绿色的零碳新质生产力。
-          </p>
-          
           <motion.a
             href="#products"
             whileHover={{ scale: 1.05 }}
