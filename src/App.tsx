@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import { Globe, Menu, X, ChevronDown, ArrowRight, Zap, Leaf, ShieldCheck, MapPin, Mail, Building, Server, Cpu, Cloud } from 'lucide-react';
+import { Globe, Menu, X, ChevronDown, ArrowRight, Zap, MapPin, Mail, Building, Server, Cpu, Cloud } from 'lucide-react';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 
 // --- Constants & Data ---
@@ -13,27 +13,6 @@ const NAV_LINKS = [
 ];
 
 const LANGUAGES = ['中文', 'English', 'ภาษาไทย', 'Tiếng Việt', 'Deutsch'];
-
-const BRAND_SERVICES = [
-  {
-    title: 'Aethra·臻电™',
-    desc: '主动式电能治理。针对高端制造业痛点，提供基于AI的主动式电能治理方案，保障生产“大动脉”稳定运行。',
-    features: ['三相不平衡治理', '谐波抑制', '无功补偿', 'AI主动防御'],
-    icon: Zap,
-  },
-  {
-    title: 'Aethra·驭能™',
-    desc: 'AI驱动的能源自动驾驶。构建“源-网-荷-储”多维灵活性资源池，实现AI驱动的能源自动驾驶，将成本中心转化为收益资产。',
-    features: ['AI削峰填谷', '智能水蓄冷', 'VPP收益', '绿电最大化'],
-    icon: Leaf,
-  },
-  {
-    title: 'Aethra·绿擎™',
-    desc: '碳管理与ESG合规。以能源数字化和AI驱动，提供可量化、可核查的碳管理报告，助力企业实现全球供应链的绿色合规。',
-    features: ['AethraGrid平台', 'EMS+MES联动', '碳足迹追踪', 'ESG合规服务'],
-    icon: ShieldCheck,
-  },
-];
 
 const CASES = [
   { title: '零碳工厂：光储一体化项目', category: '零碳工厂', img: 'https://picsum.photos/seed/factory1/800/600' },
@@ -301,33 +280,6 @@ const Products = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Brand Services */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {BRAND_SERVICES.map((service, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-[#00E5FF]/50 transition-all duration-500 overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0066FF] to-[#00E5FF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <service.icon className="w-12 h-12 text-[#00E5FF] mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4 tracking-wider">{service.title}</h3>
-              <p className="text-gray-400 font-light mb-6 leading-relaxed">{service.desc}</p>
-              <ul className="space-y-3">
-                {service.features.map((feature, j) => (
-                  <li key={j} className="flex items-center text-sm text-gray-300 font-light">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
