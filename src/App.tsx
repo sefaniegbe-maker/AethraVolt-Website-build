@@ -187,7 +187,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
-            AI+能源驱动的<br />
+            AI➕零碳新质生产力<br />
             运营商
           </h1>
           
@@ -454,7 +454,7 @@ const Footer = () => {
               <span className="text-2xl font-bold text-white tracking-wider">Aethra<span className="text-[#00E5FF]">V</span>olt</span>
             </div>
             <p className="text-gray-400 font-light mb-8 max-w-md leading-relaxed">
-              AI+能源驱动的“零碳新质生产力”运营商。致力于通过技术创新，为全球企业提供一站式综合能源解决方案。
+              AI➕零碳新质生产力运营商。致力于通过技术创新，为全球企业提供一站式综合能源解决方案。
             </p>
           </div>
           
